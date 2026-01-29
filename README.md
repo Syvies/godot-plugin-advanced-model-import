@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/Syvies/godot-plugin-advanced-model-import"><img src="https://raw.githubusercontent.com/Syvies/godot-plugin-advanced-model-import/main/icon.png" alt="Advanced Model Import" width="256"></a>
+  <a href="https://github.com/Syvies/godot-plugin-advanced-model-import"><img src="https://raw.githubusercontent.com/Syvies/godot-plugin-advanced-model-import/main/icon.svg" alt="Advanced Model Import" width="256"></a>
   <br>Advanced Model Import<br>
 </h1>
 
@@ -40,14 +40,14 @@ When selecting the option to extract meshes from models, you'll have access to a
 | `Mirror Directory Structure` | If you have subfolders in your selection, the extraction paths will try to mirror the directory structure in the destination folder. |
 | `Meshes Extract Path` | The path to the destination folder for the extracted meshes. |
 
-> [!IMPORTANT]
+> [!WARNING]
 > The path to the destination folder is mandatory when this option is selected.
 
 ### Extract Materials
 
 When selecting the option to extract materials from models, you just need to provide the path to the destination folder in `Materials Extract Path` field.
 
-> [!IMPORTANT]
+> [!WARNING]
 > The path to the destination folder is mandatory when this option is selected.
 
 ### Replace Materials
@@ -59,7 +59,7 @@ When selecting the option to extract materials from models, you'll need to provi
 > [!TIP]
 > Some asset packs may have models with similar materials with different names, you can add the same material path for multiple material names.
 
-> [!IMPORTANT]
+> [!WARNING]
 > The material Resource path is mandatory for each material name entry.
 
 ## Install
