@@ -4,7 +4,7 @@
   <br>Advanced Model Import<br>
 </h1>
 
-<h4 align="center">A collection of different plugins made for the Godot game engine in C#.</h4>
+<h4 align="center">A Godot 4.6+ plugin adding some bulk model import options.</h4>
 
 <p align="center">
   <a href="https://skillicons.dev">
