@@ -5,6 +5,7 @@ extends EditorPlugin
 
 const PLUGIN_DIR_PATH: String = "res://addons/advanced_model_import/"
 const TITLE: String = "Advanced Model Import"
+const ICON: Texture2D = preload(PLUGIN_DIR_PATH + "plugin-icon.svg")
 #  ==================== MODELS REIMPORT OPTION KEYS ====================
 const KEY_MESH_EXTRACT: StringName = &"mesh_extract"
 const KEY_MESH_EXTRACT_NAME: StringName = &"mesh_extract_name"
@@ -66,6 +67,10 @@ func _exit_tree() -> void:
 
 func _get_plugin_name() -> String:
 	return TITLE
+
+
+func _get_plugin_icon() -> Texture2D:
+	return ICON
 
 #region Utilities
 

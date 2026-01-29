@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bii74cm77sl5d"]
 
 [ext_resource type="Theme" uid="uid://w03h2vwtop28" path="res://addons/advanced_model_import/bulk_importer/bulk_importer_theme.tres" id="1_lfbos"]
+[ext_resource type="Texture2D" uid="uid://ceaxax0tmt2ka" path="res://addons/advanced_model_import/plugin-icon.svg" id="2_a7k31"]
 [ext_resource type="Script" uid="uid://cgc0mouar55cb" path="res://addons/advanced_model_import/bulk_importer/bulk_importer_dock.gd" id="2_d0s0f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lfbos"]
@@ -27,7 +28,7 @@ corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 corner_detail = 6
 
-[sub_resource type="DPITexture" id="DPITexture_lfbos"]
+[sub_resource type="DPITexture" id="DPITexture_n3eas"]
 _source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#e0e0e0\" d=\"M3 2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9c1.105 0 1.818-.91 2-2l1-6a1 1 0 0 0-1-1H6c-.552 0-.909.455-1 1l-1 6c-.091.545-.448 1-1 1a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1 1 1 0 0 0 1 1h5a1 1 0 0 0-1-1H7a2 2 0 0 0-2-2H3z\"/></svg>
 "
 saturation = 1.5
@@ -37,7 +38,7 @@ Color(0.37254903, 1, 0.5921569, 1): Color(0.45, 0.95, 0.5, 1),
 Color(1, 0.8666667, 0.39607844, 1): Color(0.83, 0.78, 0.62, 1)
 }
 
-[sub_resource type="DPITexture" id="DPITexture_d0s0f"]
+[sub_resource type="DPITexture" id="DPITexture_adykq"]
 _source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#e0e0e0\" d=\"m8 1a1 1 0 0 0 -1 1v5h-2c-1.108 0-2 .892-2 2v1h10v-1c0-1.108-.892-2-2-2h-2v-5a1 1 0 0 0 -1-1zm-5 10v4l10-1v-3z\"/></svg>
 "
 saturation = 1.5
@@ -71,7 +72,7 @@ corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 corner_detail = 6
 
-[sub_resource type="DPITexture" id="DPITexture_a7k31"]
+[sub_resource type="DPITexture" id="DPITexture_b5xwq"]
 _source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#e0e0e0\" d=\"m7 1v6h-6v2h6v6h2v-6h6v-2h-6v-6z\"/></svg>
 "
 saturation = 1.5
@@ -81,7 +82,7 @@ Color(0.37254903, 1, 0.5921569, 1): Color(0.45, 0.95, 0.5, 1),
 Color(1, 0.8666667, 0.39607844, 1): Color(0.83, 0.78, 0.62, 1)
 }
 
-[sub_resource type="DPITexture" id="DPITexture_n3eas"]
+[sub_resource type="DPITexture" id="DPITexture_1ohep"]
 _source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#e0e0e0\" d=\"M4 12a1 1 0 0 0 1.555.832l6-4a1 1 0 0 0 0-1.664l-6-4A1 1 0 0 0 4 4z\"/></svg>
 "
 saturation = 1.5
@@ -105,6 +106,7 @@ theme_override_constants/margin_bottom = 2
 title = "Advanced Model Import"
 layout_key = "advanced_model_import_dock"
 icon_name = &"DirAccess"
+dock_icon = ExtResource("2_a7k31")
 default_slot = 0
 script = ExtResource("2_d0s0f")
 _apply_button = NodePath("PanelContainer/MainContainer/Footer/Margin/HBox/ApplyButton")
@@ -256,14 +258,14 @@ virtual_keyboard_enabled = false
 layout_mode = 2
 size_flags_horizontal = 4
 tooltip_text = "Set meshes extract path"
-icon = SubResource("DPITexture_lfbos")
+icon = SubResource("DPITexture_n3eas")
 icon_alignment = 1
 
 [node name="ClearMeshButton" type="Button" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MeshPanel/VBox/HBox" unique_id=233000915]
 layout_mode = 2
 size_flags_horizontal = 4
 tooltip_text = "Clear meshes extract path"
-icon = SubResource("DPITexture_d0s0f")
+icon = SubResource("DPITexture_adykq")
 icon_alignment = 1
 
 [node name="HSeparator" type="HSeparator" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox" unique_id=1856223624]
@@ -335,14 +337,14 @@ virtual_keyboard_enabled = false
 layout_mode = 2
 size_flags_horizontal = 4
 tooltip_text = "Set materials extract path"
-icon = SubResource("DPITexture_lfbos")
+icon = SubResource("DPITexture_n3eas")
 icon_alignment = 1
 
 [node name="ClearMaterialExtractButton" type="Button" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialExtractPanel/VBox/HBox" unique_id=267116093]
 layout_mode = 2
 size_flags_horizontal = 4
 tooltip_text = "Clear materials extract path"
-icon = SubResource("DPITexture_d0s0f")
+icon = SubResource("DPITexture_adykq")
 icon_alignment = 1
 
 [node name="MaterialReplaceHeader" type="HBoxContainer" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox" unique_id=1322227126]
@@ -402,14 +404,14 @@ layout_mode = 2
 size_flags_horizontal = 4
 tooltip_text = "Add an external material entry"
 text = "Add"
-icon = SubResource("DPITexture_a7k31")
+icon = SubResource("DPITexture_b5xwq")
 
 [node name="ClearMaterialReplaceButton" type="Button" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialReplacePanel/VBox/HBox" unique_id=469272495]
 layout_mode = 2
 size_flags_horizontal = 4
 tooltip_text = "Clear all external material entries"
 text = "Clear List"
-icon = SubResource("DPITexture_d0s0f")
+icon = SubResource("DPITexture_adykq")
 
 [node name="HSeparator2" type="HSeparator" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox" unique_id=1572443596]
 layout_mode = 2
@@ -443,4 +445,4 @@ tooltip_text = "No file or directory selected
 Select at least one option"
 disabled = true
 text = "Reimport"
-icon = SubResource("DPITexture_n3eas")
+icon = SubResource("DPITexture_1ohep")

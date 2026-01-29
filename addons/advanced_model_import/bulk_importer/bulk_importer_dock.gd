@@ -89,7 +89,7 @@ static func _static_init() -> void:
 func _init() -> void:
 	available_layouts = _AVAILABLE_LAYOUTS
 	default_slot = _DEFAULT_SLOT
-	#dock_icon = AdvancedModelImportPlugin.ICON
+	dock_icon = AdvancedModelImportPlugin.ICON
 	icon_name = _EDITOR_ICON
 	layout_key = _LAYOUT_KEY
 	title = AdvancedModelImportPlugin.TITLE
