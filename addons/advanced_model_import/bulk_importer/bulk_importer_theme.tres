@@ -1,0 +1,65 @@
+[gd_resource type="Theme" format=3 uid="uid://w03h2vwtop28"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_on827"]
+content_margin_left = 4.0
+content_margin_top = 0.0
+content_margin_right = 4.0
+content_margin_bottom = 0.0
+color = Color(0.5, 0.5, 0.5, 0.7529412)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_48fxy"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.04, 0.04, 0.04, 0.627451)
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_on827"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.39215687)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q82jf"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.04, 0.04, 0.04, 0.627451)
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 3
+
+[resource]
+BoxContainer/constants/separation = 4
+GridContainer/constants/h_separation = 4
+GridContainer/constants/v_separation = 4
+HSeparator/styles/separator = SubResource("StyleBoxLine_on827")
+LineEdit/colors/font_uneditable_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+LineEdit/styles/normal = SubResource("StyleBoxFlat_48fxy")
+LineEdit/styles/read_only = SubResource("StyleBoxFlat_48fxy")
+MarginContainer/constants/margin_bottom = 4
+MarginContainer/constants/margin_left = 4
+MarginContainer/constants/margin_right = 4
+MarginContainer/constants/margin_top = 4
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_on827")
+TextEdit/colors/font_readonly_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+TextEdit/styles/normal = SubResource("StyleBoxFlat_q82jf")
+TextEdit/styles/read_only = SubResource("StyleBoxFlat_q82jf")

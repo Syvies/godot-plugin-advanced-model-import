@@ -1,0 +1,446 @@
+[gd_scene format=3 uid="uid://bii74cm77sl5d"]
+
+[ext_resource type="Theme" uid="uid://w03h2vwtop28" path="res://addons/advanced_model_import/bulk_importer/bulk_importer_theme.tres" id="1_lfbos"]
+[ext_resource type="Script" uid="uid://cgc0mouar55cb" path="res://addons/advanced_model_import/bulk_importer/bulk_importer_dock.gd" id="2_d0s0f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lfbos"]
+content_margin_left = 4.0
+content_margin_top = 2.0
+content_margin_right = 4.0
+content_margin_bottom = 2.0
+bg_color = Color(0.04, 0.04, 0.04, 0.7529412)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d0s0f"]
+content_margin_left = 4.0
+content_margin_top = 2.0
+content_margin_right = 4.0
+content_margin_bottom = 2.0
+bg_color = Color(0.04, 0.04, 0.04, 0.7529412)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 6
+
+[sub_resource type="DPITexture" id="DPITexture_lfbos"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#e0e0e0\" d=\"M3 2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9c1.105 0 1.818-.91 2-2l1-6a1 1 0 0 0-1-1H6c-.552 0-.909.455-1 1l-1 6c-.091.545-.448 1-1 1a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1 1 1 0 0 0 1 1h5a1 1 0 0 0-1-1H7a2 2 0 0 0-2-2H3z\"/></svg>
+"
+saturation = 1.5
+color_map = {
+Color(1, 0.37254903, 0.37254903, 1): Color(1, 0.47, 0.42, 1),
+Color(0.37254903, 1, 0.5921569, 1): Color(0.45, 0.95, 0.5, 1),
+Color(1, 0.8666667, 0.39607844, 1): Color(0.83, 0.78, 0.62, 1)
+}
+
+[sub_resource type="DPITexture" id="DPITexture_d0s0f"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#e0e0e0\" d=\"m8 1a1 1 0 0 0 -1 1v5h-2c-1.108 0-2 .892-2 2v1h10v-1c0-1.108-.892-2-2-2h-2v-5a1 1 0 0 0 -1-1zm-5 10v4l10-1v-3z\"/></svg>
+"
+saturation = 1.5
+color_map = {
+Color(1, 0.37254903, 0.37254903, 1): Color(1, 0.47, 0.42, 1),
+Color(0.37254903, 1, 0.5921569, 1): Color(0.45, 0.95, 0.5, 1),
+Color(1, 0.8666667, 0.39607844, 1): Color(0.83, 0.78, 0.62, 1)
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a7k31"]
+content_margin_left = 4.0
+content_margin_top = 2.0
+content_margin_right = 4.0
+content_margin_bottom = 2.0
+bg_color = Color(0.04, 0.04, 0.04, 0.7529412)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n3eas"]
+content_margin_left = 4.0
+content_margin_top = 2.0
+content_margin_right = 4.0
+content_margin_bottom = 2.0
+bg_color = Color(0.04, 0.04, 0.04, 0.7529412)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 6
+
+[sub_resource type="DPITexture" id="DPITexture_a7k31"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#e0e0e0\" d=\"m7 1v6h-6v2h6v6h2v-6h6v-2h-6v-6z\"/></svg>
+"
+saturation = 1.5
+color_map = {
+Color(1, 0.37254903, 0.37254903, 1): Color(1, 0.47, 0.42, 1),
+Color(0.37254903, 1, 0.5921569, 1): Color(0.45, 0.95, 0.5, 1),
+Color(1, 0.8666667, 0.39607844, 1): Color(0.83, 0.78, 0.62, 1)
+}
+
+[sub_resource type="DPITexture" id="DPITexture_n3eas"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#e0e0e0\" d=\"M4 12a1 1 0 0 0 1.555.832l6-4a1 1 0 0 0 0-1.664l-6-4A1 1 0 0 0 4 4z\"/></svg>
+"
+saturation = 1.5
+color_map = {
+Color(1, 0.37254903, 0.37254903, 1): Color(1, 0.47, 0.42, 1),
+Color(0.37254903, 1, 0.5921569, 1): Color(0.45, 0.95, 0.5, 1),
+Color(1, 0.8666667, 0.39607844, 1): Color(0.83, 0.78, 0.62, 1)
+}
+
+[node name="BulkImporterDock" type="EditorDock" unique_id=515079167 node_paths=PackedStringArray("_apply_button", "_selected_paths_label", "_mesh_check", "_mesh_panel", "_mesh_name_option", "_mesh_mirror_check", "_mesh_path_edit", "_mesh_path_set_button", "_mesh_path_clear_button", "_mat_extract_check", "_mat_extract_panel", "_mat_extract_path_edit", "_mat_extract_path_set_button", "_mat_extract_path_clear_button", "_mat_replace_check", "_mat_replace_panel", "_mat_replace_no_material", "_mat_replace_material_container", "_mat_replace_name_edit", "_mat_replace_add_button", "_mat_replace_clear_button")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_lfbos")
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+title = "Advanced Model Import"
+layout_key = "advanced_model_import_dock"
+icon_name = &"DirAccess"
+default_slot = 0
+script = ExtResource("2_d0s0f")
+_apply_button = NodePath("PanelContainer/MainContainer/Footer/Margin/HBox/ApplyButton")
+_selected_paths_label = NodePath("PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/SelectedPathsLabel")
+_mesh_check = NodePath("PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MeshHeader/Panel/MeshCheck")
+_mesh_panel = NodePath("PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MeshPanel")
+_mesh_name_option = NodePath("PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MeshPanel/VBox/Grid/MeshNameOption")
+_mesh_mirror_check = NodePath("PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MeshPanel/VBox/Grid/MeshMirrorPanel/MeshMirrorCheck")
+_mesh_path_edit = NodePath("PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MeshPanel/VBox/HBox/MeshPathEdit")
+_mesh_path_set_button = NodePath("PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MeshPanel/VBox/HBox/SetMeshButton")
+_mesh_path_clear_button = NodePath("PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MeshPanel/VBox/HBox/ClearMeshButton")
+_mat_extract_check = NodePath("PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialExtractHeader/Panel/MaterialExtractCheck")
+_mat_extract_panel = NodePath("PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialExtractPanel")
+_mat_extract_path_edit = NodePath("PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialExtractPanel/VBox/HBox/MaterialExtractPathEdit")
+_mat_extract_path_set_button = NodePath("PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialExtractPanel/VBox/HBox/SetMaterialExtractButton")
+_mat_extract_path_clear_button = NodePath("PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialExtractPanel/VBox/HBox/ClearMaterialExtractButton")
+_mat_replace_check = NodePath("PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialReplaceHeader/Panel/MaterialReplaceCheck")
+_mat_replace_panel = NodePath("PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialReplacePanel")
+_mat_replace_no_material = NodePath("PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialReplacePanel/VBox/Panel/NoMaterialLabel")
+_mat_replace_material_container = NodePath("PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialReplacePanel/VBox/Panel/MaterialReplaceListContainer")
+_mat_replace_name_edit = NodePath("PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialReplacePanel/VBox/HBox/AddMaterialNameEdit")
+_mat_replace_add_button = NodePath("PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialReplacePanel/VBox/HBox/AddMaterialReplaceButton")
+_mat_replace_clear_button = NodePath("PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialReplacePanel/VBox/HBox/ClearMaterialReplaceButton")
+metadata/_custom_type_script = "uid://cgc0mouar55cb"
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=605163877]
+layout_mode = 2
+
+[node name="MainContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1509694706]
+layout_mode = 2
+
+[node name="MarginOut" type="MarginContainer" parent="PanelContainer/MainContainer" unique_id=1986281356]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_right = 2
+
+[node name="Scroll" type="ScrollContainer" parent="PanelContainer/MainContainer/MarginOut" unique_id=1004767762]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="MarginIn" type="MarginContainer" parent="PanelContainer/MainContainer/MarginOut/Scroll" unique_id=277081079]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 0
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn" unique_id=1640465145]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MeshHeader" type="HBoxContainer" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox" unique_id=1281742323]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MeshHeader" unique_id=904645947]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"HeaderMedium"
+text = "Meshes"
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="Panel" type="PanelContainer" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MeshHeader" unique_id=902450970]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_lfbos")
+
+[node name="MeshCheck" type="CheckBox" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MeshHeader/Panel" unique_id=994701478]
+layout_mode = 2
+text = "Enabled"
+
+[node name="MeshPanel" type="PanelContainer" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox" unique_id=1802200845]
+visible = false
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MeshPanel" unique_id=1776144495]
+layout_mode = 2
+
+[node name="Grid" type="GridContainer" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MeshPanel/VBox" unique_id=1753547047]
+layout_mode = 2
+columns = 2
+
+[node name="MeshNameLabel" type="Label" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MeshPanel/VBox/Grid" unique_id=709064279]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Meshes Name"
+vertical_alignment = 1
+
+[node name="MeshNameOption" type="OptionButton" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MeshPanel/VBox/Grid" unique_id=633587925]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text_overrun_behavior = 3
+clip_text = true
+selected = 0
+fit_to_longest_item = false
+item_count = 2
+popup/item_0/text = "Use Mesh Name"
+popup/item_0/id = 0
+popup/item_1/text = "Use Node Name"
+popup/item_1/id = 1
+
+[node name="MeshMirrorLabel" type="Label" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MeshPanel/VBox/Grid" unique_id=99159285]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Mirror Directory Structure"
+vertical_alignment = 1
+
+[node name="MeshMirrorPanel" type="PanelContainer" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MeshPanel/VBox/Grid" unique_id=1116960917]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_d0s0f")
+
+[node name="MeshMirrorCheck" type="CheckBox" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MeshPanel/VBox/Grid/MeshMirrorPanel" unique_id=24090519]
+layout_mode = 2
+text = "Enabled"
+
+[node name="MeshPathLabel" type="Label" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MeshPanel/VBox" unique_id=1875767867]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Meshes Extract Path"
+vertical_alignment = 1
+
+[node name="HBox" type="HBoxContainer" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MeshPanel/VBox" unique_id=1217670078]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MeshPathEdit" type="LineEdit" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MeshPanel/VBox/HBox" unique_id=2078586871]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+placeholder_text = "res://"
+editable = false
+context_menu_enabled = false
+emoji_menu_enabled = false
+middle_mouse_paste_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+
+[node name="SetMeshButton" type="Button" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MeshPanel/VBox/HBox" unique_id=1807439504]
+layout_mode = 2
+size_flags_horizontal = 4
+tooltip_text = "Set meshes extract path"
+icon = SubResource("DPITexture_lfbos")
+icon_alignment = 1
+
+[node name="ClearMeshButton" type="Button" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MeshPanel/VBox/HBox" unique_id=233000915]
+layout_mode = 2
+size_flags_horizontal = 4
+tooltip_text = "Clear meshes extract path"
+icon = SubResource("DPITexture_d0s0f")
+icon_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox" unique_id=1856223624]
+layout_mode = 2
+
+[node name="MaterialHeader" type="HBoxContainer" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox" unique_id=1357725731]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialHeader" unique_id=1936885812]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"HeaderMedium"
+text = "Materials"
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="MaterialExtractHeader" type="HBoxContainer" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox" unique_id=1922140656]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialExtractHeader" unique_id=31186133]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"HeaderSmall"
+text = "Extract Materials"
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="Panel" type="PanelContainer" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialExtractHeader" unique_id=1240800501]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_a7k31")
+
+[node name="MaterialExtractCheck" type="CheckBox" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialExtractHeader/Panel" unique_id=1831522288]
+layout_mode = 2
+text = "Enabled"
+
+[node name="MaterialExtractPanel" type="PanelContainer" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox" unique_id=1119339483]
+visible = false
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialExtractPanel" unique_id=6303377]
+layout_mode = 2
+
+[node name="MaterialExtractPathLabel" type="Label" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialExtractPanel/VBox" unique_id=352183422]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Materials Extract Path"
+vertical_alignment = 1
+
+[node name="HBox" type="HBoxContainer" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialExtractPanel/VBox" unique_id=1667798259]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MaterialExtractPathEdit" type="LineEdit" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialExtractPanel/VBox/HBox" unique_id=535691527]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+placeholder_text = "res://"
+editable = false
+context_menu_enabled = false
+emoji_menu_enabled = false
+middle_mouse_paste_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+
+[node name="SetMaterialExtractButton" type="Button" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialExtractPanel/VBox/HBox" unique_id=59443505]
+layout_mode = 2
+size_flags_horizontal = 4
+tooltip_text = "Set materials extract path"
+icon = SubResource("DPITexture_lfbos")
+icon_alignment = 1
+
+[node name="ClearMaterialExtractButton" type="Button" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialExtractPanel/VBox/HBox" unique_id=267116093]
+layout_mode = 2
+size_flags_horizontal = 4
+tooltip_text = "Clear materials extract path"
+icon = SubResource("DPITexture_d0s0f")
+icon_alignment = 1
+
+[node name="MaterialReplaceHeader" type="HBoxContainer" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox" unique_id=1322227126]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialReplaceHeader" unique_id=1368236900]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"HeaderSmall"
+text = "Replace Materials"
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="Panel" type="PanelContainer" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialReplaceHeader" unique_id=1623539090]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_n3eas")
+
+[node name="MaterialReplaceCheck" type="CheckBox" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialReplaceHeader/Panel" unique_id=1840178398]
+layout_mode = 2
+text = "Enabled"
+
+[node name="MaterialReplacePanel" type="PanelContainer" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox" unique_id=457684761]
+visible = false
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialReplacePanel" unique_id=621159214]
+layout_mode = 2
+
+[node name="Panel" type="PanelContainer" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialReplacePanel/VBox" unique_id=1545488101]
+layout_mode = 2
+
+[node name="NoMaterialLabel" type="Label" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialReplacePanel/VBox/Panel" unique_id=186551868]
+layout_mode = 2
+theme_type_variation = &"TooltipLabel"
+text = "No Material Selected"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MaterialReplaceListContainer" type="VBoxContainer" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialReplacePanel/VBox/Panel" unique_id=1532405345]
+layout_mode = 2
+
+[node name="HBox" type="HBoxContainer" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialReplacePanel/VBox" unique_id=610214308]
+layout_mode = 2
+alignment = 1
+
+[node name="AddMaterialNameEdit" type="LineEdit" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialReplacePanel/VBox/HBox" unique_id=27354455]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Material Name"
+emoji_menu_enabled = false
+clear_button_enabled = true
+caret_blink = true
+
+[node name="AddMaterialReplaceButton" type="Button" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialReplacePanel/VBox/HBox" unique_id=279319070]
+layout_mode = 2
+size_flags_horizontal = 4
+tooltip_text = "Add an external material entry"
+text = "Add"
+icon = SubResource("DPITexture_a7k31")
+
+[node name="ClearMaterialReplaceButton" type="Button" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox/MaterialReplacePanel/VBox/HBox" unique_id=469272495]
+layout_mode = 2
+size_flags_horizontal = 4
+tooltip_text = "Clear all external material entries"
+text = "Clear List"
+icon = SubResource("DPITexture_d0s0f")
+
+[node name="HSeparator2" type="HSeparator" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox" unique_id=1572443596]
+layout_mode = 2
+
+[node name="SelectedPathsLabel" type="RichTextLabel" parent="PanelContainer/MainContainer/MarginOut/Scroll/MarginIn/VBox" unique_id=1137193262]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 2
+bbcode_enabled = true
+text = "[color=WEB_GRAY]No Selected File / Directory[/color]"
+autowrap_mode = 0
+selection_enabled = true
+
+[node name="Footer" type="PanelContainer" parent="PanelContainer/MainContainer" unique_id=241111418]
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MainContainer/Footer" unique_id=1893595655]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 2
+
+[node name="HBox" type="HBoxContainer" parent="PanelContainer/MainContainer/Footer/Margin" unique_id=1199021663]
+layout_mode = 2
+alignment = 1
+
+[node name="ApplyButton" type="Button" parent="PanelContainer/MainContainer/Footer/Margin/HBox" unique_id=1635815221]
+layout_mode = 2
+tooltip_text = "No file or directory selected
+Select at least one option"
+disabled = true
+text = "Reimport"
+icon = SubResource("DPITexture_n3eas")

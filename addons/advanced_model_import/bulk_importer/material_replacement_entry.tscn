@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://v07pydq2wqdi"]
+
+[ext_resource type="Theme" uid="uid://w03h2vwtop28" path="res://addons/advanced_model_import/bulk_importer/bulk_importer_theme.tres" id="1_ubtf2"]
+[ext_resource type="Script" uid="uid://dth2gh7ma2nok" path="res://addons/advanced_model_import/bulk_importer/material_replacement_entry.gd" id="2_nsdcd"]
+
+[sub_resource type="DPITexture" id="DPITexture_lfbos"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#e0e0e0\" d=\"M3 2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9c1.105 0 1.818-.91 2-2l1-6a1 1 0 0 0-1-1H6c-.552 0-.909.455-1 1l-1 6c-.091.545-.448 1-1 1a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1 1 1 0 0 0 1 1h5a1 1 0 0 0-1-1H7a2 2 0 0 0-2-2H3z\"/></svg>
+"
+saturation = 1.5
+color_map = {
+Color(1, 0.37254903, 0.37254903, 1): Color(1, 0.47, 0.42, 1),
+Color(0.37254903, 1, 0.5921569, 1): Color(0.45, 0.95, 0.5, 1),
+Color(1, 0.8666667, 0.39607844, 1): Color(0.83, 0.78, 0.62, 1)
+}
+
+[sub_resource type="DPITexture" id="DPITexture_nsdcd"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#e0e0e0\" d=\"m5 1v1h-4v2h14v-2h-4v-1zm-3 4v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-8zm1 2h2v6h-2zm4 0h2v6h-2zm4 0h2v6h-2z\"/></svg>
+"
+saturation = 1.5
+color_map = {
+Color(1, 0.37254903, 0.37254903, 1): Color(1, 0.47, 0.42, 1),
+Color(0.37254903, 1, 0.5921569, 1): Color(0.45, 0.95, 0.5, 1),
+Color(1, 0.8666667, 0.39607844, 1): Color(0.83, 0.78, 0.62, 1)
+}
+
+[node name="MaterialReplacementEntry" type="HBoxContainer" unique_id=379798247 node_paths=PackedStringArray("_mat_name_edit", "_mat_path_edit", "_set_path_button", "_remove_button")]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 31.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_ubtf2")
+script = ExtResource("2_nsdcd")
+_mat_name_edit = NodePath("MaterialNameEdit")
+_mat_path_edit = NodePath("MaterialPathEdit")
+_set_path_button = NodePath("SetPathButton")
+_remove_button = NodePath("RemoveButton")
+metadata/_custom_type_script = "uid://dth2gh7ma2nok"
+
+[node name="MaterialNameEdit" type="LineEdit" parent="." unique_id=2003218203]
+layout_mode = 2
+size_flags_horizontal = 3
+editable = false
+context_menu_enabled = false
+emoji_menu_enabled = false
+middle_mouse_paste_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+
+[node name="MaterialPathEdit" type="LineEdit" parent="." unique_id=589908855]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+editable = false
+context_menu_enabled = false
+emoji_menu_enabled = false
+middle_mouse_paste_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+
+[node name="SetPathButton" type="Button" parent="." unique_id=1219428800]
+layout_mode = 2
+tooltip_text = "Set material path"
+icon = SubResource("DPITexture_lfbos")
+icon_alignment = 1
+
+[node name="RemoveButton" type="Button" parent="." unique_id=380696298]
+layout_mode = 2
+tooltip_text = "Remove item"
+icon = SubResource("DPITexture_nsdcd")
+icon_alignment = 1
