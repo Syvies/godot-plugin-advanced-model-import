@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/Syvies/godot-plugin-advanced-model-import"><img src="https://raw.githubusercontent.com/Syvies/godot-plugin-advanced-model-import/main/icon.svg" alt="Advanced Model Import" width="256"></a>
+  <a href="https://github.com/Syvies/godot-plugin-advanced-model-import"><img src="https://raw.githubusercontent.com/Syvies/godot-plugin-advanced-model-import/main/icon.svg" alt="Advanced Model Import icon" width="256"></a>
   <br>Advanced Model Import<br>
 </h1>
 
@@ -29,6 +29,12 @@
 - See the affected model's paths depending on your selection in the FileSystem Dock.
 
 ## How To Use
+
+<p align="center">
+  <a href="https://github.com/Syvies/godot-plugin-advanced-model-import">
+    <img src="https://raw.githubusercontent.com/Syvies/godot-plugin-advanced-model-import/main/images/dock.png" alt="Screen capture of the plugin's dock" width="256"/>
+  </a>
+</p>
 
 ### Extract Meshes
 
@@ -72,7 +78,7 @@ Make sure that the path to the plugin is `res://addons/advanced_model_import/plu
 
 - ~~[Asset Library](https://godotengine.org/asset-library/)~~
 - ~~[Godot Asset Store](https://store-beta.godotengine.org/)~~
-- ~~[Direct download](https://github.com/Syvies/godot-plugin-advanced-model-import)~~
+- [Direct download](https://github.com/Syvies/godot-plugin-advanced-model-import/releases/latest)
 
 ## Credits
 
