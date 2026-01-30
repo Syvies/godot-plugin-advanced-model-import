@@ -76,8 +76,8 @@ Make sure that the path to the plugin is `res://addons/advanced_model_import/plu
 
 ## Download
 
-- ~~[Asset Library](https://godotengine.org/asset-library/)~~
-- ~~[Godot Asset Store](https://store-beta.godotengine.org/)~~
+- [Asset Library](https://godotengine.org/asset-library/asset/4719)
+- [Godot Asset Store](https://store-beta.godotengine.org/asset/syvies/advanced-model-import/)
 - [Direct download](https://github.com/Syvies/godot-plugin-advanced-model-import/releases/latest)
 
 ## Credits
