@@ -102,7 +102,7 @@ static func apply_reimport(file_paths: PackedStringArray, options: Dictionary) -
 
 	var has_mat_user_list: bool = options.get(KEY_MATERIAL_REPLACE, false) as bool
 
-	if has_mat_user_list || !_materials_to_set.is_empty():
+	if has_mat_user_list && !_materials_to_set.is_empty():
 		import_error = _replace_materials(file_paths, options, has_mat_user_list)
 
 		if has_mat_user_list && import_error == Error.OK:
@@ -118,6 +118,8 @@ static func apply_reimport(file_paths: PackedStringArray, options: Dictionary) -
 		else:
 			printerr("Failed to extract meshes: %s" % [error_string(import_error).capitalize()])
 
+	_materials_to_set.clear()
+
 	EditorInterface.get_resource_filesystem().scan_sources()
 
 
@@ -126,7 +128,7 @@ static func _get_mesh_instances_from_scene(file_path: String) -> Array[MeshInsta
 		file_path,
 		"",
 		ResourceLoader.CacheMode.CACHE_MODE_IGNORE_DEEP,
-	)
+	) as PackedScene
 
 	if !is_instance_valid(packed_scene):
 		return []
@@ -166,6 +168,9 @@ static func _extract_materials(file_paths: PackedStringArray, options: Dictionar
 
 	if !material_path.ends_with("/"):
 		material_path += "/"
+
+	# In case the folder is missing during extraction.
+	DirAccess.make_dir_recursive_absolute(material_path)
 
 	for file: String in file_paths:
 		var error: Error = _extract_materials_from_file(file, material_path)
@@ -301,6 +306,9 @@ static func _extract_meshes(file_paths: PackedStringArray, options: Dictionary) 
 	if !mesh_path.ends_with("/"):
 		mesh_path += "/"
 
+	var directories_to_create: PackedStringArray = PackedStringArray()
+	directories_to_create.append(mesh_path)
+
 	var mesh_name: MeshName = options.get(
 		KEY_MESH_EXTRACT_NAME,
 		MeshName.USE_MESH_NAME,
@@ -314,15 +322,20 @@ static func _extract_meshes(file_paths: PackedStringArray, options: Dictionary) 
 		elif mesh_source_path.ends_with("/"):
 			mesh_source_path = mesh_source_path.trim_suffix("/")
 
+	var error: Error = Error.OK
+
 	for file: String in file_paths:
-		var destination = mesh_path
+		var destination: String = mesh_path
 
 		if mirror:
 			destination += file.get_base_dir().replace(mesh_source_path, "")
 			if !destination.ends_with("/"):
 				destination += "/"
 
-		var error: Error = _extract_meshes_from_file(file, destination, mesh_name)
+			if !directories_to_create.has(destination):
+				directories_to_create.append(destination)
+
+		error = _extract_meshes_from_file(file, destination, mesh_name)
 
 		if error == Error.OK:
 			continue
@@ -341,6 +354,14 @@ static func _extract_meshes(file_paths: PackedStringArray, options: Dictionary) 
 
 		if error == Error.ERR_FILE_CANT_WRITE:
 			printerr("Can't write import file of \"%s\"." % [file])
+
+	for directory: String in directories_to_create:
+		error = DirAccess.make_dir_recursive_absolute(directory)
+
+		if error != Error.OK:
+			printerr(
+				"Can't create directory \"%s\": %s" % [directory, error_string(error).capitalize()],
+			)
 
 	return Error.OK
 
@@ -368,7 +389,7 @@ static func _extract_meshes_from_file(
 
 		mesh_list[mesh.resource_name] = "%s%s.res" % [
 			destination,
-			mesh_instance.name if mesh_name == MeshName.USE_NODE_NAME else mesh.resource_name,
+			str(mesh_instance.name) if mesh_name == MeshName.USE_NODE_NAME else mesh.resource_name,
 		]
 
 	return _set_mesh_on_file(file_path, mesh_list)

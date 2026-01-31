@@ -3,8 +3,6 @@
 class_name BulkImporterDock
 extends EditorDock
 
-signal material_file_selected(file_path: String)
-
 const _AVAILABLE_LAYOUTS: int = EditorDock.DockLayout.DOCK_LAYOUT_VERTICAL \
 + EditorDock.DockLayout.DOCK_LAYOUT_FLOATING
 const _DEFAULT_SLOT: EditorDock.DockSlot = EditorDock.DockSlot.DOCK_SLOT_LEFT_UL
@@ -94,7 +92,10 @@ func _init() -> void:
 	layout_key = _LAYOUT_KEY
 	title = AdvancedModelImportPlugin.TITLE
 
-	_material_entry_scene = ResourceLoader.load(_MAT_ENTRY_SCENE_PATH, "PackedScene")
+	_material_entry_scene = ResourceLoader.load(
+		_MAT_ENTRY_SCENE_PATH,
+		"PackedScene",
+	) as PackedScene
 
 	_mesh_extract_path_dialog = EditorFileDialog.new()
 	_setup_editor_file_dialog(_mesh_extract_path_dialog)
