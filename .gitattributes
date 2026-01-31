@@ -3,5 +3,7 @@
 
 # Only include the addons folder when downloading from the Asset Library.
 /**                              export-ignore
+/addons                          !export-ignore
+/addons/**                       export-ignore
 /addons/advanced_model_import    !export-ignore
 /addons/advanced_model_import/** !export-ignore
