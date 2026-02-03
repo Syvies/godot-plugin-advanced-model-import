@@ -102,7 +102,7 @@ static func apply_reimport(file_paths: PackedStringArray, options: Dictionary) -
 
 	var has_mat_user_list: bool = options.get(KEY_MATERIAL_REPLACE, false) as bool
 
-	if has_mat_user_list && !_materials_to_set.is_empty():
+	if has_mat_user_list || !_materials_to_set.is_empty():
 		import_error = _replace_materials(file_paths, options, has_mat_user_list)
 
 		if has_mat_user_list && import_error == Error.OK:
@@ -206,6 +206,7 @@ static func _extract_materials_from_file(file_path: String, destination: String)
 			var material: Material = mesh.surface_get_material(idx).duplicate(true) as Material
 
 			if !is_instance_valid(material):
+				material = null
 				continue
 
 			if !_materials_to_set.has(material.resource_name):
@@ -215,6 +216,8 @@ static func _extract_materials_from_file(file_path: String, destination: String)
 					ResourceSaver.save(material, material_path)
 
 				_materials_to_set[material.resource_name] = material_path
+
+			material = null
 
 	return Error.OK
 

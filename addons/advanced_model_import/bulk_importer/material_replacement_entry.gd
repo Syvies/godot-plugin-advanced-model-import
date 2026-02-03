@@ -17,6 +17,7 @@ var material_name: String:
 		_material_name_value = value
 		if is_instance_valid(_mat_name_edit):
 			_mat_name_edit.text = value
+			_mat_name_edit.tooltip_text = value
 var material_path: String:
 	get:
 		return _material_path_value
@@ -24,6 +25,7 @@ var material_path: String:
 		_material_path_value = value
 		if is_instance_valid(_mat_path_edit):
 			_mat_path_edit.text = value
+			_mat_path_edit.tooltip_text = value
 
 var _material_name_value: String = ""
 var _material_path_value: String = ""

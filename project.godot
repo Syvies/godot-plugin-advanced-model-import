@@ -16,10 +16,10 @@ general/accessibility_support=2
 
 config/name="Advanced Import Plugin"
 config/description="A Godot 4.6+ plugin adding some bulk model import options."
-config/version="0.1.0"
+config/version="0.2.1"
 config/tags=PackedStringArray("gd_script", "github", "plugin")
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://bsnkfithuowdm"
 
 [debug]
 

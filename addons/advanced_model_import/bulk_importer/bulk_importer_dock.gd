@@ -444,7 +444,9 @@ func _on_mat_entry_path_changed(entry: MaterialReplacementEntry) -> void:
 		if is_instance_valid(mat_resource):
 			_material_replace_dict[entry.material_name] = mat_resource
 
-			print("%s added." % [mat_resource.resource_path])
+			print(
+				"Material \"%s\" at %s added." % [entry.material_name, mat_resource.resource_path],
+			)
 			_check_can_apply()
 			return
 
